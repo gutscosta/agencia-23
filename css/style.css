@@ -1,0 +1,13 @@
+.nav-link {
+    color: #d30c7b;
+}
+
+#banner {
+    display: flex;
+    height: 300px;
+    background: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    color:#d30c7b; 
+}
+
