@@ -1,3 +1,18 @@
+
+<?php
+
+$servicos = [
+  ["imagem"=>"images/site.svg","titulo"=>"Criar um site","descrição"=>"Descrição do Serviço 1"],
+
+  ["imagem"=>"images/mktplace.svg","titulo"=>"Criar uma Loja Virtual","descrição"=>"Descrição do Serviço 2"],
+  
+  ["imagem"=>"images/blog.svg","titulo"=>"Criar um Blog","descrição"=>"Descrição do Serviço 3"]
+  
+];
+
+?>
+
+
 <html lang="en">
 
 <head>
@@ -38,36 +53,21 @@
     </section>
     <section id="servico" class="container mt-5">
       <div class=row>
+
+      <?php foreach($servicos as $servico){ ?>
         <div class="col-4">
           <div class="card">
-            <img src="images/site.svg" class="card-img-top" alt="...">
+            <img src="<?php echo $servico["imagem"]; ?>" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Um Site!</h5>
-              <p class="card-text">Tem aquele projeto bacana pra pôr em prática? Sua empresa precisa de exposição? Contate-nos!</p>
+              <h5 class="card-title">
+              <?php echo $servico["titulo"]; ?>
+              </h5>
+              <p class="card-text"><?php echo $servico["descrição"]; ?></p>
               <a href="#" class="btn btn-primary">Converse conosco!</a>
             </div>
           </div>
         </div>
-        <div class="col-4">
-          <div class="card">
-            <img src="images/mktplace.svg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Um Marketplace!</h5>
-              <p class="card-text">Quer desapegar ou empreender? Faça uma lojinha conosco! Vender web é economia de espaço e lucro certo! =)</p>
-              <a href="#" class="btn btn-primary">Venda comigo!</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <img src="images/blog.svg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">...Ou um Blog?</h5>
-              <p class="card-text">Crie seu blog conosco! Tecnologia de ponta e o mesmo conforto administrativos de CERTOS microblogs, haha!</p>
-              <a href="#" class="btn btn-primary">Torne-se um influencer!</a>
-            </div>
-          </div>
-        </div>
+        <?php } ?>
       </div>
       </div>
 
